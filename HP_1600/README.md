@@ -8,8 +8,10 @@ Communication between panel and board is done with SPI.
 
 * More info at:
 
-http://wp.me/p31f2I-95
 http://wp.me/p31f2I-3W
+
+http://wp.me/p31f2I-95
+
 
 * Youtube video:
 
