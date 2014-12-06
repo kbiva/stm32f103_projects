@@ -1,6 +1,8 @@
 /*
  *  main.c
  *
+ *  HP LaserJet 5N front panel demo
+ *
  *  Author: Kestutis Bivainis
  */
 

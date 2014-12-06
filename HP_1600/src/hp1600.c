@@ -1,6 +1,8 @@
 /*
  *  hp1600.h
  *
+ *  HP Color LaserJet 1600 front panel demo
+ *
  *  Author: Kestutis Bivainis
  */
 

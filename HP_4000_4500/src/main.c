@@ -1,6 +1,8 @@
 /*
  *  main.c
  *
+ *  HP LaserJet 4000/4500 front panels demo
+ *
  *  Author: Kestutis Bivainis
  */
 
