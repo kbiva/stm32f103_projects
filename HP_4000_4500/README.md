@@ -4,6 +4,7 @@
 
 Source code for the demo.
 HP LaserJet 4000 and 4500 front panels connected to HY-STM32 board.
+LCD sizes are 2x16 symbols. LCD controllers are Hitachi HD66710.
 Communication between panels and board is done with SPI.
 
 * More info at:

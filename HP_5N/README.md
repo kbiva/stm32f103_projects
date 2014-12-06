@@ -3,8 +3,9 @@
 * HP_5N
 
 Source code for the demo.
-HP LaserJet 5N front panel with vacuum fluorescent display (VFD)
-connected to HY-STM32 board.
+HP LaserJet 5N front panel connected to HY-STM32 board.
+Vacuum fluorescent display (VFD) size is 1x16 symbols.
+VFD controller is Mitsubishi/Renesas M66004.
 Communication between panel and board is done with SPI.
 
 * More info at:
