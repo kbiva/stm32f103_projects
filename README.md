@@ -13,3 +13,7 @@ HP LaserJet 4000 and 4500 front panels demo.
 * HP_5N
   
 HP LaserJet 5N front panel demo.
+
+* Kenwood_KDC-MP6090R 
+
+Kenwood KDC-MP6090R face plate demo.
