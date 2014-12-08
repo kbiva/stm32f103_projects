@@ -59,7 +59,6 @@ typedef struct _PIN {
   uint32_t GPIO_Bus;
 } PIN;
 
-
 #define CMD_INPUT 0x42
 #define CMD_OUTPUT 0xC2
 
