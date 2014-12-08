@@ -17,3 +17,7 @@ HP LaserJet 5N front panel demo.
 * Kenwood_KDC-MP6090R 
 
 Kenwood KDC-MP6090R face plate demo.
+
+* Roadstar_CD-354MP
+
+Roadstar CD-354MP/FM face plate demo.
