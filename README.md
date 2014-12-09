@@ -2,6 +2,10 @@
 
 Various projects for the HY-STM32 board, made by me.
 
+* Clarion_DRX7375R
+  
+Clarion DRX7375R face plate demo.
+
 * HP_1600
   
 HP Color LaserJet 1600 front panel demo.
