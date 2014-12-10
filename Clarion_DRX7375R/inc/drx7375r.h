@@ -58,12 +58,10 @@ typedef struct _DATA_LC75854 {
   uint8_t data[7];
 } DATA_LC75854;
 
-
 typedef struct _DATA_LC75824 {
   uint8_t ccb_address;
   uint8_t data[8];
 } DATA_LC75824;
-
 
 #define CMD_INPUT_LC75854 0x42
 #define CMD_OUTPUT_LC75854 0xC2
@@ -125,7 +123,6 @@ typedef struct _DATA_LC75824 {
 #define SYMBOL_LC75854_3        0x3180
 #define SYMBOL_LC75854_2        0x3280
 #define SYMBOL_LC75854_1        0x3380
-
 
 #define SYMBOL_LC75824_LETTER4UP            0x0080
 #define SYMBOL_LC75824_LETTER3DOWNBACKSLASH 0x0040
@@ -223,7 +220,6 @@ typedef struct _DATA_LC75824 {
 #define KEY_SCN       0x10
 #define KEY_6         0x40
 #define KEY_5         0x80
-
 
 #define RING_1        10
 #define RING_2        9
