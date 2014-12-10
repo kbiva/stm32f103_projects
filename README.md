@@ -25,3 +25,7 @@ Kenwood KDC-MP6090R face plate demo.
 * Roadstar_CD-354MP
 
 Roadstar CD-354MP/FM face plate demo.
+
+* Sony_MDXC7900R
+
+Sony MDX-C7900R face plate demo.
