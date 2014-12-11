@@ -22,6 +22,10 @@ HP LaserJet 5N front panel demo.
 
 Kenwood KDC-MP6090R face plate demo.
 
+* Nokia_6100_stars
+
+Moving stars demo on Nokia 6100/6020 LCD.
+
 * Roadstar_CD-354MP
 
 Roadstar CD-354MP/FM face plate demo.
