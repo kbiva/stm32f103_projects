@@ -10,4 +10,5 @@ Various projects for the HY-STM32 board, made by me.
 * <b>Nokia_6100_stars</b> - Moving stars demo on Nokia 6100/6020 LCD.
 * <b>Roadstar_CD-354MP</b> - Roadstar CD-354MP/FM face plate demo.
 * <b>Samsung_GT-E1050</b> - Samsung GT-E1050 LCD demo.
+* <b>Samsung_E700</b> - Samsung E700 LCD demo.
 * <b>Sony_MDXC7900R</b> -Sony MDX-C7900R face plate demo.
