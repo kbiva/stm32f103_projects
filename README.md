@@ -30,6 +30,10 @@ Moving stars demo on Nokia 6100/6020 LCD.
 
 Roadstar CD-354MP/FM face plate demo.
 
+* Samsung_GT-E1050
+
+Samsung GT-E1050 LCD demo.
+
 * Sony_MDXC7900R
 
 Sony MDX-C7900R face plate demo.
