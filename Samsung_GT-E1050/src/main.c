@@ -51,7 +51,7 @@ int main (void) {
   S6B33BG_OrientationMode(ORIENTATION_PORTRAIT);
   S6B33BG_ClearScreen(BLACK);
 
-  S6B33BG_SetFont(FONT_8x16);
+  S6B33BG_SetFont(FONT_8x14);
   S6B33BG_PutStr("Mobile phone LCD",2,2);
   S6B33BG_PutStr("Samsung GT-E1050",2,14);
   S6B33BG_SetFont(FONT_6x8);
