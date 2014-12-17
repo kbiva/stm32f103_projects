@@ -83,7 +83,7 @@ int main(void) {
 
   HD66773R_ClearScreen(BLACK);
 
-  HD66773R_SetFont(FONT_8x16);
+  HD66773R_SetFont(FONT_8x14);
   HD66773R_PutStr("Mobile phone LCD",0,2);
   HD66773R_PutStr("Samsung E700",12,14);
   HD66773R_SetFont(FONT_6x8);
@@ -113,7 +113,7 @@ int main(void) {
   HD66773R_PutStr("anymore. LCD works",0,60);
   HD66773R_PutStr("but backlight is not",0,70);
   HD66773R_PutStr("nice and not uniform",0,80);
-  HD66773R_SetFont(FONT_8x16);
+  HD66773R_SetFont(FONT_8x14);
   HD66773R_PutStr("Demonstation of",0,88);
   HD66773R_PutStr("soldering flux",0,102);
   HD66773R_PutStr("beneath the LCD:",0,116);
@@ -148,7 +148,7 @@ int main(void) {
   DWT_Delay(5000000);
   HD66773R_ClearScreen(BLACK);
 
-  HD66773R_SetFont(FONT_8x16);
+  HD66773R_SetFont(FONT_8x14);
   HD66773R_PutStr("Blue gradient",10,8);
   HD66773R_Fill(0,31,HD66773R_GetWidth()-1,31,WHITE);
   Gradient(0x08,32,4,2000000);
