@@ -10,9 +10,9 @@
 
 static PIN_SPI pins_spi[]={
   {{CS_Pin, CS_Speed, CS_Mode}, CS_Port, CS_Bus},
-  {{SCLK_Pin,SCLK_Speed,SCLK_Mode},SCLK_Port,SCLK_Bus, SCLK_AFIO_Bus},
-  {{MOSI_Pin,MOSI_Speed,MOSI_Mode},MOSI_Port,MOSI_Bus, MOSI_AFIO_Bus},
-  {{MISO_Pin,MISO_Speed,MISO_Mode},MISO_Port,MISO_Bus, MISO_AFIO_Bus},
+  {{SCLK_Pin,SCLK_Speed,SCLK_Mode},SCLK_Port,SCLK_Bus},
+  {{MOSI_Pin,MOSI_Speed,MOSI_Mode},MOSI_Port,MOSI_Bus},
+  {{MISO_Pin,MISO_Speed,MISO_Mode},MISO_Port,MISO_Bus},
 };
 
 uint8_t _displaycontrol;
@@ -100,8 +100,6 @@ void GPIO_Configuration(void) {
 
   for(i=0;i<sizeof(pins_spi)/sizeof(PIN_SPI);i++) {
     RCC_APB2PeriphClockCmd(pins_spi[i].GPIO_Bus,ENABLE);
-    if(pins_spi[i].AFIO_Bus)
-      RCC_APB2PeriphClockCmd(pins_spi[i].AFIO_Bus,ENABLE);
     GPIO_Init(pins_spi[i].GPIOx,&pins_spi[i].GPIO_InitStructure);
   }
 
