@@ -20,21 +20,18 @@
 #define SCLK_Mode     GPIO_Mode_AF_PP
 #define SCLK_Port     GPIOB
 #define SCLK_Bus      RCC_APB2Periph_GPIOB
-//#define SCLK_AFIO_Bus RCC_APB2Periph_AFIO
 
 #define MISO_Pin      GPIO_Pin_14            // MISO = PB[14]
 #define MISO_Speed    GPIO_Speed_50MHz
 #define MISO_Mode     GPIO_Mode_AF_PP
 #define MISO_Port     GPIOB
 #define MISO_Bus      RCC_APB2Periph_GPIOB
-//#define MISO_AFIO_Bus RCC_APB2Periph_AFIO
 
 #define MOSI_Pin      GPIO_Pin_15            // MOSI = PB[15]
 #define MOSI_Speed    GPIO_Speed_50MHz
 #define MOSI_Mode     GPIO_Mode_AF_PP
 #define MOSI_Port     GPIOB
 #define MOSI_Bus      RCC_APB2Periph_GPIOB
-//#define MOSI_AFIO_Bus RCC_APB2Periph_AFIO
 
 #define LATCH_Pin     GPIO_Pin_10            // Latch = PC[10]
 #define LATCH_Speed   GPIO_Speed_50MHz
@@ -46,7 +43,6 @@ typedef struct _PIN_SPI {
   GPIO_InitTypeDef GPIO_InitStructure;
   GPIO_TypeDef* GPIOx;
   uint32_t GPIO_Bus;
-  uint32_t AFIO_Bus;
 } PIN_SPI;
 
 typedef enum _BUTTONS {

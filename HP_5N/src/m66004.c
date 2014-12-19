@@ -86,8 +86,6 @@ void GPIO_Configuration(void) {
 
   for(i=0;i<sizeof(pins_spi)/sizeof(PIN_SPI);i++) {
     RCC_APB2PeriphClockCmd(pins_spi[i].GPIO_Bus,ENABLE);
-    //if(pins_spi[i].AFIO_Bus)
-    //  RCC_APB2PeriphClockCmd(pins_spi[i].AFIO_Bus,ENABLE);
     GPIO_Init(pins_spi[i].GPIOx,&pins_spi[i].GPIO_InitStructure);
   }
 
