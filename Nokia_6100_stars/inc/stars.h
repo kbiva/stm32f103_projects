@@ -20,6 +20,19 @@ typedef struct _TStar {
 #define STARS_COLOR_8BIT
 //#define STARS_COLOR_16BIT
 
+
+#define STARS_SPI             SPI1
+#define STARS_SPI_DMA_CHANNEL DMA1_Channel3
+#define STARS_SPI_DMA_TC      DMA1_FLAG_TC3
+#define STARS_SPI_DMA_TCIF    DMA_ISR_TCIF3
+
+/*
+#define STARS_SPI             SPI2
+#define STARS_SPI_DMA_CHANNEL DMA1_Channel5
+#define STARS_SPI_DMA_TC      DMA1_FLAG_TC5
+#define STARS_SPI_DMA_TCIF    DMA_ISR_TCIF5
+*/
+
 #define TO_8BIT_COLOR(c) (((c&0xE000)>>8)|((c&0x0700)>>6)|((c&0x018)>>3))
 
 #define MAX_X 128

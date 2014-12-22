@@ -116,14 +116,14 @@ void display_stars(void) {
 #endif
     }
     PCF8833_SPI9bits_Flush();
-    PCF8833_SPI9bits(NOP);
-    PCF8833_SPI9bits(PASET);
+    PCF8833_SPI9bits(PCF8833_NOP);
+    PCF8833_SPI9bits(PCF8833_PASET);
     PCF8833_SPI9bits(1|0x100);
     PCF8833_SPI9bits(MAX_X|0x100);
-    PCF8833_SPI9bits(CASET);
+    PCF8833_SPI9bits(PCF8833_CASET);
     PCF8833_SPI9bits(1|0x100);
     PCF8833_SPI9bits(MAX_Y|0x100);
-    PCF8833_SPI9bits(RAMWR);
+    PCF8833_SPI9bits(PCF8833_RAMWR);
 
     stars_DMA_SpiSend();
 
@@ -139,9 +139,9 @@ void stars_DMA_Init(void) {
 
   RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
 
-  DMA_DeInit(DMA1_Channel3);
+  DMA_DeInit(STARS_SPI_DMA_CHANNEL);
 
-  DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)(&(SPI1->DR));
+  DMA_InitStructure.DMA_PeripheralBaseAddr = (uint32_t)(&(STARS_SPI->DR));
   DMA_InitStructure.DMA_DIR = DMA_DIR_PeripheralDST;
   DMA_InitStructure.DMA_PeripheralInc = DMA_PeripheralInc_Disable;
   DMA_InitStructure.DMA_MemoryInc = DMA_MemoryInc_Enable;
@@ -151,7 +151,7 @@ void stars_DMA_Init(void) {
   DMA_InitStructure.DMA_Priority = DMA_Priority_High;
   DMA_InitStructure.DMA_M2M = DMA_M2M_Disable;
 
-  DMA_Init(DMA1_Channel3, &DMA_InitStructure);
+  DMA_Init(STARS_SPI_DMA_CHANNEL, &DMA_InitStructure);
 
   DMA_DeInit(DMA1_Channel6);
 
@@ -168,17 +168,17 @@ void stars_DMA_Init(void) {
   DMA_Init(DMA1_Channel6, &DMA_InitStructure);
 
 /*
-  DMA1_Channel3->CCR = 0;
-  DMA1_Channel3->CCR |= DMA_DIR_PeripheralDST |
-                        DMA_Mode_Normal |
-                        DMA_PeripheralInc_Disable |
-                        DMA_MemoryInc_Enable |
-                        DMA_PeripheralDataSize_Byte |
-                        DMA_MemoryDataSize_Byte |
-                        DMA_Priority_High |
-                        DMA_M2M_Disable;
+  STARS_SPI_DMA_CHANNEL->CCR = 0;
+  STARS_SPI_DMA_CHANNEL->CCR |= DMA_DIR_PeripheralDST |
+                                DMA_Mode_Normal |
+                                DMA_PeripheralInc_Disable |
+                                DMA_MemoryInc_Enable |
+                                DMA_PeripheralDataSize_Byte |
+                                DMA_MemoryDataSize_Byte |
+                                DMA_Priority_High |
+                                DMA_M2M_Disable;
 
-  DMA1_Channel3->CPAR = (uint32_t)(&(SPI1->DR));
+  STARS_SPI_DMA_CHANNEL->CPAR = (uint32_t)(&(STARS_SPI->DR));
 
   DMA1_Channel6->CCR = 0;
   DMA1_Channel6->CCR |= DMA_DIR_PeripheralDST |
@@ -213,20 +213,20 @@ void stars_DMA_ClearBuf(void) {
 void stars_DMA_SpiSend(void) {
 
 #ifdef STARS_COLOR_8BIT
-  DMA1_Channel3->CNDTR = MAX_X*MAX_Y*9/8;
+  STARS_SPI_DMA_CHANNEL->CNDTR = MAX_X*MAX_Y*9/8;
 #elif  defined STARS_COLOR_16BIT
-  DMA1_Channel3->CNDTR = MAX_X*MAX_Y*2*9/8;
+  STARS_SPI_DMA_CHANNEL->CNDTR = MAX_X*MAX_Y*2*9/8;
 #endif
 
-  DMA1_Channel3->CMAR =(uint32_t)frame;
+  STARS_SPI_DMA_CHANNEL->CMAR =(uint32_t)frame;
 
-  DMA1_Channel3->CCR |= DMA_IT_TC;// DMA_ITConfig(DMA1_Channel3, DMA_IT_TC, ENABLE);
-  DMA1_Channel3->CCR |= DMA_CCR1_EN; //DMA_Cmd(DMA1_Channel3, ENABLE);
-  SPI1->CR2 |= SPI_I2S_DMAReq_Tx; //SPI_I2S_DMACmd(SPI1, SPI_I2S_DMAReq_Tx, ENABLE);
-  while(!(DMA1->ISR&DMA1_FLAG_TC3));
-  DMA1->IFCR |= ((uint32_t)(DMA_ISR_GIF3 | DMA_ISR_TCIF3 | DMA_ISR_HTIF3 | DMA_ISR_TEIF3));
-  DMA1_Channel3->CCR &= ~DMA_IT_TC; //DMA_ITConfig(DMA1_Channel3, DMA_IT_TC, DISABLE);
-  DMA1_Channel3->CCR &= (uint16_t)~DMA_CCR1_EN; //DMA_Cmd(DMA1_Channel3, DISABLE);
-  SPI1->CR2 &= (uint16_t)~SPI_I2S_DMAReq_Tx; //SPI_I2S_DMACmd(SPI1, SPI_I2S_DMAReq_Tx, DISABLE);
+  STARS_SPI_DMA_CHANNEL->CCR |= DMA_IT_TC;// DMA_ITConfig(STARS_SPI_DMA_CHANNEL, DMA_IT_TC, ENABLE);
+  STARS_SPI_DMA_CHANNEL->CCR |= DMA_CCR1_EN; //DMA_Cmd(STARS_SPI_DMA_CHANNEL, ENABLE);
+  STARS_SPI->CR2 |= SPI_I2S_DMAReq_Tx; //SPI_I2S_DMACmd(STARS_SPI, SPI_I2S_DMAReq_Tx, ENABLE);
+  while(!(DMA1->ISR&STARS_SPI_DMA_TC));
+  DMA1->IFCR |= ((uint32_t)(STARS_SPI_DMA_TCIF));
+  STARS_SPI_DMA_CHANNEL->CCR &= ~DMA_IT_TC; //DMA_ITConfig(STARS_SPI_DMA_CHANNEL, DMA_IT_TC, DISABLE);
+  STARS_SPI_DMA_CHANNEL->CCR &= (uint16_t)~DMA_CCR1_EN; //DMA_Cmd(STARS_SPI_DMA_CHANNEL, DISABLE);
+  STARS_SPI->CR2 &= (uint16_t)~SPI_I2S_DMAReq_Tx; //SPI_I2S_DMACmd(STARS_SPI, SPI_I2S_DMAReq_Tx, DISABLE);
 
 }

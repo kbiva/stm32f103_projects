@@ -19,19 +19,19 @@ int main(void) {
 
   DWT_Init();
   DWT_Delay(200000);
-
+	
   BSP_Button_Init(BUTTON3,BUTTON_MODE_EXTI);
   BSP_Button_Init(BUTTON4,BUTTON_MODE_EXTI);
-
+	
   // Initialize display
-  PCF8833_Init(ACCESS_SPI9BITS);
+  PCF8833_Init(PCF8833_ACCESS_SPI9BITS);
 #ifdef STARS_COLOR_8BIT
-  PCF8833_ColorMode(COLOR_8BIT);
+  PCF8833_ColorMode(PCF8833_COLOR_8BIT);
   PCF8833_SetupColor(RGB8ColorMap_Nokia6020,48);
 #elif  defined STARS_COLOR_16BIT
-  PCF8833_ColorMode(COLOR_16BIT);
+  PCF8833_ColorMode(PCF8833_COLOR_16BIT);
 #endif
-  PCF8833_SetOrientation(ORIENTATION_PORTRAIT1,1);
+  PCF8833_SetOrientation(PCF8833_ORIENTATION_PORTRAIT1,1);
   PCF8833_SetContrast(NOKIA6020_SETCON_DATA);
   PCF8833_ClearScreen(BLACK);
 
@@ -39,6 +39,6 @@ int main(void) {
   ADC_SoftwareStartConvCmd(ADC1, ENABLE);
 
   display_stars();
-
+	
   while(1){};
 }
