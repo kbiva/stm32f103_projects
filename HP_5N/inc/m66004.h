@@ -23,7 +23,7 @@
 
 #define MISO_Pin      GPIO_Pin_14            // MISO = PB[14]
 #define MISO_Speed    GPIO_Speed_50MHz
-#define MISO_Mode     GPIO_Mode_AF_PP
+#define MISO_Mode     GPIO_Mode_IN_FLOATING
 #define MISO_Port     GPIOB
 #define MISO_Bus      RCC_APB2Periph_GPIOB
 

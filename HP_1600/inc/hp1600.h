@@ -29,7 +29,7 @@
 
 #define MISO_Pin      GPIO_Pin_6            // MISO = PA[6]
 #define MISO_Speed    GPIO_Speed_50MHz
-#define MISO_Mode     GPIO_Mode_AF_PP
+#define MISO_Mode     GPIO_Mode_IN_FLOATING
 #define MISO_Port     GPIOA
 #define MISO_Bus      RCC_APB2Periph_GPIOA
 

@@ -19,7 +19,7 @@
 
 #define DATAL_Pin    GPIO_Pin_14            // MISO = PB[14]
 #define DATAL_Speed  GPIO_Speed_50MHz
-#define DATAL_Mode   GPIO_Mode_AF_PP
+#define DATAL_Mode   GPIO_Mode_IN_FLOATING
 #define DATAL_Port   GPIOB
 #define DATAL_Bus    RCC_APB2Periph_GPIOB
 
