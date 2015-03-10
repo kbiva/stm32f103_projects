@@ -89,6 +89,7 @@ int main (void) {
   uint32_t i,max_x,max_y,t_start,t_end;
   uint16_t x0,y0,x1,y1,tmp;
   char buf[16];
+  uint8_t regs[5];
 
   // reset pseudo-random number generator
   x = 123456789;
@@ -98,7 +99,7 @@ int main (void) {
 
   DWT_Init();
 
-  DWT_Delay(2000000);
+  DWT_Delay(1000000);
 
   BSP_Buttons_Init(BUTTON_MODE_EXTI);
 
@@ -121,6 +122,66 @@ int main (void) {
   MC2PA8201_PutStr("Connector: 24pin 24R-JANK-GSAN-TF with 0.4mm pitch",0,175);
   MC2PA8201_PutStr("Backlight: 4 LEDs",0,195);
   MC2PA8201_PutStr("MPU Interface: 8bit 8080 parallel",0,215);
+  DWT_Delay(5000000);
+
+  MC2PA8201_ClearScreen(BLACK);
+  MC2PA8201_SetFont(FONT_8x14);
+  MC2PA8201_PutStrCentered("Reading from registers:",0);
+  MC2PA8201_SetFont(FONT_6x8);
+  MC2PA8201_ReadRegister(READ_DISPLAY_ID,3,regs);
+  MC2PA8201_PutStr("(0x04) DISPLAY_ID:",0,35);
+  sprintf(buf,"%02X %02X %02X",regs[0],regs[1],regs[2]);
+  MC2PA8201_PutStr(buf,200,35);
+
+  MC2PA8201_ReadRegister(READ_DISPLAY_STATUS,4,regs);
+  MC2PA8201_PutStr("(0x09) DISPLAY_STATUS:",0,45);
+  sprintf(buf,"%02X %02X %02X %02X",regs[0],regs[1],regs[2],regs[3]);
+  MC2PA8201_PutStr(buf,200,45);
+
+  MC2PA8201_ReadRegister(READ_DISPLAY_POWER_MODE,1,regs);
+  MC2PA8201_PutStr("(0x0A) DISPLAY_POWER_MODE:",0,55);
+  sprintf(buf,"%02X",regs[0]);
+  MC2PA8201_PutStr(buf,200,55);
+
+  MC2PA8201_ReadRegister(READ_DISPLAY_MADCTL,1,regs);
+  MC2PA8201_PutStr("(0x0B) DISPLAY_MADCTL:",0,65);
+  sprintf(buf,"%02X",regs[0]);
+  MC2PA8201_PutStr(buf,200,65);
+
+  MC2PA8201_ReadRegister(READ_DISPLAY_PIXEL_FORMAT,1,regs);
+  MC2PA8201_PutStr("(0x0C) DISPLAY_PIXEL_FORMAT:",0,75);
+  sprintf(buf,"%02X",regs[0]);
+  MC2PA8201_PutStr(buf,200,75);
+
+  MC2PA8201_ReadRegister(READ_DISPLAY_IMAGE_MODE,1,regs);
+  MC2PA8201_PutStr("(0x0D) DISPLAY_IMAGE_MODE:",0,85);
+  sprintf(buf,"%02X",regs[0]);
+  MC2PA8201_PutStr(buf,200,85);
+
+  MC2PA8201_ReadRegister(READ_DISPLAY_SIGNAL_MODE,1,regs);
+  MC2PA8201_PutStr("(0x0E) DISPLAY_SIGNAL_MODE:",0,95);
+  sprintf(buf,"%02X",regs[0]);
+  MC2PA8201_PutStr(buf,200,95);
+
+  MC2PA8201_ReadRegister(READ_DISPLAY_SELF_DIAGNOSTICS,1,regs);
+  MC2PA8201_PutStr("(0x0F) DISPLAY_SELF_DIAGNOSTICS:",0,105);
+  sprintf(buf,"%02X",regs[0]);
+  MC2PA8201_PutStr(buf,200,105);
+
+  MC2PA8201_ReadRegister(READ_ID1,1,regs);
+  MC2PA8201_PutStr("(0xDA) ID1:",0,115);
+  sprintf(buf,"%02X",regs[0]);
+  MC2PA8201_PutStr(buf,200,115);
+
+  MC2PA8201_ReadRegister(READ_ID2,1,regs);
+  MC2PA8201_PutStr("(0xDB) ID2:",0,125);
+  sprintf(buf,"%02X",regs[0]);
+  MC2PA8201_PutStr(buf,200,125);
+
+  MC2PA8201_ReadRegister(READ_ID3,1,regs);
+  MC2PA8201_PutStr("(0xDC) ID3:",0,135);
+  sprintf(buf,"%02X",regs[0]);
+  MC2PA8201_PutStr(buf,200,135);
   DWT_Delay(5000000);
 
   MC2PA8201_ClearScreen(BLACK);
