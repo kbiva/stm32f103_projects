@@ -102,7 +102,7 @@ int main (void) {
 
   BSP_Buttons_Init(BUTTON_MODE_EXTI);
 
-  MC2PA8201_Init();
+  MC2PA8201_Init(0,1);
   MC2PA8201_ColorMode(COLOR_24BIT);
   MC2PA8201_OrientationMode(ORIENTATION_LANDSCAPE);
   MC2PA8201_ClearScreen(BLACK);
