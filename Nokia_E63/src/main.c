@@ -51,7 +51,7 @@ void displayOrientation(char* text) {
   MC2PA8201_PutStrCentered("TOP",0);
   MC2PA8201_PutStrCentered("BOTTOM",max_y-14);
   MC2PA8201_PutStr("LEFT",0,max_y/2);
-  MC2PA8201_PutStr("RIGTH",max_x-8*5,max_y/2);
+  MC2PA8201_PutStr("RIGHT",max_x-8*5,max_y/2);
   MC2PA8201_PutStrCentered("Orientation:",max_y/2-16/2);
   MC2PA8201_PutStrCentered(text,max_y/2+16/2);
   DWT_Delay(3000000);
@@ -186,8 +186,8 @@ int main (void) {
 
   MC2PA8201_ClearScreen(BLACK);
   MC2PA8201_SetFont(FONT_8x14);
-  MC2PA8201_PutStrCentered("Color mode used in this demo",MC2PA8201_GetHeight()/2);
-  MC2PA8201_PutStrCentered("is 16M (24 bit/pixel)",MC2PA8201_GetHeight()/2+32/2);
+  MC2PA8201_PutStrCentered("Color mode used in this demo",MC2PA8201_GetHeight()/2-16/2);
+  MC2PA8201_PutStrCentered("is 16M (24 bit/pixel)",MC2PA8201_GetHeight()/2+16/2);
   DWT_Delay(3000000);
 
   MC2PA8201_ClearScreen(BLACK);
