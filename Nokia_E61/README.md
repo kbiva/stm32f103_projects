@@ -8,8 +8,10 @@ LCD controller is Magnachip MC2PA8201 compatible.
 
 * More info at:
 
-
+http://wp.me/p31f2I-iy
 
 * Youtube video:
+
+http://youtu.be/-x-gfJ9SrZQ
 
 
