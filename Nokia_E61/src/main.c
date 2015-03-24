@@ -15,7 +15,7 @@
 #include "delay.h"
 #include "hy_stm32.h"
 #include "3d.h"
-#include "math.h"
+#include <math.h>
 #include "jpeg.h"
 #include <stdio.h>
 
