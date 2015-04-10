@@ -42,7 +42,7 @@ int main (void) {
   ADC_DMA_Configuration();
   ADC_SoftwareStartConvCmd(ADC1, ENABLE);
 
-  if(S6B33BG_Init()==S6B33BG_ERROR) {
+  if(S6B33BG_Init(0,1)==S6B33BG_ERROR) {
     BSP_LED_On(LED1);
     while(1);
   }
