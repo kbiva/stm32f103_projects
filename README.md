@@ -16,4 +16,5 @@ About development board HY-STM32: http://wp.me/p31f2I-1F
 * <b>Roadstar_CD-354MP</b> - Roadstar CD-354MP/FM face plate demo.
 * <b>Samsung_E700</b> - Samsung E700 LCD demo.
 * <b>Samsung_GT-E1050</b> - Samsung GT-E1050 LCD demo.
-* <b>Sony_MDXC7900R</b> -Sony MDX-C7900R face plate demo.
+* <b>Scott_MCX80</b> - Scott MCX80 face plate demo.
+* <b>Sony_MDXC7900R</b> - Sony MDX-C7900R face plate demo.
