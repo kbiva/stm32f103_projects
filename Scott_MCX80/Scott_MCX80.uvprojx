@@ -414,14 +414,14 @@
               <FilePath>.\inc\adc.h</FilePath>
             </File>
             <File>
-              <FileName>font.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\inc\font.h</FilePath>
-            </File>
-            <File>
               <FileName>mcx80.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\inc\mcx80.h</FilePath>
+            </File>
+            <File>
+              <FileName>font13seg.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\inc\font13seg.h</FilePath>
             </File>
           </Files>
         </Group>

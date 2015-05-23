@@ -10,7 +10,7 @@
 #include "mcx80.h"
 #include "adc.h"
 #include "delay.h"
-#include "font.h"
+#include "font13seg.h"
 
 __align(4) uint8_t display_data[20];
 
