@@ -8,6 +8,7 @@ About development board HY-STM32: http://wp.me/p31f2I-1F
 * <b>HP_1600</b> - HP Color LaserJet 1600 front panel demo.
 * <b>HP_4000_4500</b> - HP LaserJet 4000 and 4500 front panels demo.
 * <b>HP_5N</b> - HP LaserJet 5N front panel demo.
+* <b>Kenwood_KDC-5060R</b> - Kenwood KDC-5060R face plate demo.
 * <b>Kenwood_KDC-MP6090R</b> - Kenwood KDC-MP6090R face plate demo.
 * <b>Nokia_6100_stars</b> - Moving stars demo on Nokia 6100/6020 LCD.
 * <b>Nokia_E61</b> - Nokia E61 LCD demo.
