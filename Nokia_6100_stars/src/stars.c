@@ -13,6 +13,7 @@
 #include "colors_16bit.h"
 #include "delay.h"
 #include <stdlib.h>
+#include "xorshift.h"
 
 extern volatile uint16_t ADCConvertedValue[];
 uint16_t actual_stars;
@@ -34,21 +35,6 @@ uint8_t clr[]={TO_8BIT_COLOR(WHITE),TO_8BIT_COLOR(YELLOW),TO_8BIT_COLOR(CYAN)};
 uint16_t clr[]={WHITE,YELLOW,CYAN};
 //uint16_t clr[]={WHITE,WHITE,WHITE};
 #endif
-
-uint32_t xor128(void) {
-  static uint32_t x = 123456789;
-  static uint32_t y = 362436069;
-  static uint32_t z = 521288629;
-  static uint32_t w = 88675123;
-  uint32_t t;
-
-  t = x ^ (x << 11);
-  x = y;
-  y = z;
-  z = w;
-  return w = w ^ (w >> 19) ^ (t ^ (t >> 8));
-}
-
 
 void display_stars(void) {
   uint32_t i;

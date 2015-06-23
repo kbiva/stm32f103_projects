@@ -15,6 +15,7 @@
 #include "jpeg.h"
 #include <math.h>
 #include <stdio.h>
+#include "xorshift.h"
 
 extern uint8_t data1[];
 extern uint8_t data2[];
@@ -26,22 +27,6 @@ extern uint8_t* dataptr;
 COLOR_MODE current_color_mode;
 
 void show_fire(void);
-
-static uint32_t x;
-static uint32_t y;
-static uint32_t z;
-static uint32_t w;
-// Xorshift pseudorandom number generator
-uint32_t xor128(void) {
-
-  uint32_t t;
-
-  t = x ^ (x << 11);
-  x = y;
-  y = z;
-  z = w;
-  return w = w ^ (w >> 19) ^ (t ^ (t >> 8));
-}
 
 void displayOrientation(char* text) {
 
@@ -296,12 +281,6 @@ int main (void) {
   uint16_t x0,y0,x1,y1,tmp;
   char buf[16];
   uint8_t regs[5];
-
-  // reset pseudo-random number generator
-  x = 123456789;
-  y = 362436069;
-  z = 521288629;
-  w = 88675123;
 
   DWT_Init();
 

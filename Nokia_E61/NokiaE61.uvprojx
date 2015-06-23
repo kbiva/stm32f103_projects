@@ -84,6 +84,8 @@
             <UserProg2Name></UserProg2Name>
             <UserProg1Dos16Mode>0</UserProg1Dos16Mode>
             <UserProg2Dos16Mode>0</UserProg2Dos16Mode>
+            <nStopA1X>0</nStopA1X>
+            <nStopA2X>0</nStopA2X>
           </AfterMake>
           <SelectedForBatchBuild>0</SelectedForBatchBuild>
           <SVCSIdString></SVCSIdString>
@@ -361,11 +363,13 @@
             <uSurpInc>0</uSurpInc>
             <uC99>0</uC99>
             <useXO>0</useXO>
+            <v6Lang>0</v6Lang>
+            <v6LangP>0</v6LangP>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\inc;..\..\libs\lib_STM32F10x_StdPeriph\inc;..\..\libs\lib_MC2PA8201\inc;..\..\libs\lib_delay\inc;..\..\libs\lib_BSP_HY-STM32\inc;..\..\libs\lib_tjpegd\inc</IncludePath>
+              <IncludePath>.\inc;..\..\libs\lib_STM32F10x_StdPeriph\inc;..\..\libs\lib_MC2PA8201\inc;..\..\libs\lib_delay\inc;..\..\libs\lib_BSP_HY-STM32\inc;..\..\libs\lib_tjpegd\inc;..\..\libs\lib_xorshift\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -501,6 +505,8 @@
                 <uSurpInc>2</uSurpInc>
                 <uC99>2</uC99>
                 <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
                 <VariousControls>
                   <MiscControls></MiscControls>
                   <Define></Define>
@@ -657,6 +663,11 @@
               <FileName>lib_tjpegd.lib</FileName>
               <FileType>4</FileType>
               <FilePath>..\..\libs\lib_tjpegd\obj\lib_tjpegd.lib</FilePath>
+            </File>
+            <File>
+              <FileName>lib_xorshift.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\..\libs\lib_xorshift\obj\lib_xorshift.lib</FilePath>
             </File>
           </Files>
         </Group>
