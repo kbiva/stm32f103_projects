@@ -11,6 +11,7 @@ About development board HY-STM32: http://wp.me/p31f2I-1F
 * <b>Kenwood_KDC-5060R</b> - Kenwood KDC-5060R face plate demo.
 * <b>Kenwood_KDC-MP6090R</b> - Kenwood KDC-MP6090R face plate demo.
 * <b>Nokia_6100_stars</b> - Moving stars demo on Nokia 6100/6020 LCD.
+* <b>Nokia_6151</b> - Nokia 6151 LCD demo.
 * <b>Nokia_E61</b> - Nokia E61 LCD demo.
 * <b>Nokia_E63</b> - Nokia E63 LCD demo.
 * <b>Nokia_N70</b> - Nokia N70 LCD demo.
