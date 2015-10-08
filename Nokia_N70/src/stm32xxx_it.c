@@ -30,7 +30,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include <stdint.h>
 #include "stm32f10x_conf.h"
-#include "NokiaN70.h"
+#include "MC2PA8201.h"
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -46,7 +46,7 @@ void EXTI2_IRQHandler(void)
 {
   //Check if EXTI_Line2 is asserted
   if(EXTI_GetITStatus(EXTI_Line2) != RESET) {
-     NokiaN70_Sleep();
+     MC2PA8201_Sleep();
   }
   //we need to clear line pending bit manually
   EXTI_ClearITPendingBit(EXTI_Line2);
@@ -56,7 +56,7 @@ void EXTI3_IRQHandler(void)
 {
   //Check if EXTI_Line3 is asserted
   if(EXTI_GetITStatus(EXTI_Line3) != RESET) {
-    NokiaN70_Wakeup();
+    MC2PA8201_Wakeup();
   }
   //we need to clear line pending bit manually
   EXTI_ClearITPendingBit(EXTI_Line3);
@@ -66,7 +66,7 @@ void EXTI4_IRQHandler(void)
 {
   //Check if EXTI_Line3 is asserted
   if(EXTI_GetITStatus(EXTI_Line4) != RESET) {
-    NokiaN70_IdleModeOn();
+    MC2PA8201_IdleModeOn();
   }
   //we need to clear line pending bit manually
   EXTI_ClearITPendingBit(EXTI_Line4);
@@ -76,7 +76,7 @@ void EXTI9_5_IRQHandler(void)
 {
   //Check if EXTI_Line3 is asserted
   if(EXTI_GetITStatus(EXTI_Line5) != RESET) {
-    NokiaN70_IdleModeOff();
+    MC2PA8201_IdleModeOff();
   }
   //we need to clear line pending bit manually
   EXTI_ClearITPendingBit(EXTI_Line5);

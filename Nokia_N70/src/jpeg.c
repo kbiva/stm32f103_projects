@@ -8,7 +8,7 @@
 #include <stdint.h>
 #include <string.h>
 #include "tjpgd.h"
-#include "NokiaN70.h"
+#include "MC2PA8201.h"
 #include "jpeg.h"
 
 uint8_t* dataptr;
@@ -37,7 +37,7 @@ static uint32_t tjd_output (
 )
 {
 
-  NokiaN70_FillFromBuffer(rect->left,rect->top,rect->right,rect->bottom,(uint8_t*)bitmap);
+  MC2PA8201_FillFromBuffer(rect->left,rect->top,rect->right,rect->bottom,(uint8_t*)bitmap);
 
   return 1;  /* Continue decompression */
 }

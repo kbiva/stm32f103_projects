@@ -10,6 +10,7 @@
       <TargetName>NokiaN70</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060020::V5.06 (build 20)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103ZE</Device>
@@ -229,6 +230,7 @@
             <useUlib>0</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
+            <nSecure>0</nSecure>
             <RoSelD>3</RoSelD>
             <RwSelD>3</RwSelD>
             <CodeSel>0</CodeSel>
@@ -365,11 +367,13 @@
             <useXO>0</useXO>
             <v6Lang>0</v6Lang>
             <v6LangP>0</v6LangP>
+            <vShortEn>0</vShortEn>
+            <vShortWch>0</vShortWch>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>.\inc;..\..\libs\lib_STM32F10x_StdPeriph\inc;..\..\libs\lib_NokiaN70\inc;..\..\libs\lib_delay\inc;..\..\libs\lib_BSP_HY-STM32\inc;..\..\libs\lib_tjpegd\inc;..\..\libs\lib_xorshift\inc</IncludePath>
+              <IncludePath>.\inc;..\..\libs\lib_STM32F10x_StdPeriph\inc;..\..\libs\lib_MC2PA8201\inc;..\..\libs\lib_delay\inc;..\..\libs\lib_BSP_HY-STM32\inc;..\..\libs\lib_tjpegd\inc;..\..\libs\lib_xorshift\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -478,11 +482,6 @@
               <FilePath>..\..\libs\lib_BSP_HY-STM32\obj\lib_BSP_HY-STM32.lib</FilePath>
             </File>
             <File>
-              <FileName>lib_NokiaN70.lib</FileName>
-              <FileType>4</FileType>
-              <FilePath>..\..\libs\lib_NokiaN70\obj\lib_NokiaN70.lib</FilePath>
-            </File>
-            <File>
               <FileName>lib_tjpegd.lib</FileName>
               <FileType>4</FileType>
               <FilePath>..\..\libs\lib_tjpegd\obj\lib_tjpegd.lib</FilePath>
@@ -491,6 +490,11 @@
               <FileName>lib_xorshift.lib</FileName>
               <FileType>4</FileType>
               <FilePath>..\..\libs\lib_xorshift\obj\lib_xorshift.lib</FilePath>
+            </File>
+            <File>
+              <FileName>lib_MC2PA8201.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\..\libs\lib_MC2PA8201\obj\lib_MC2PA8201.lib</FilePath>
             </File>
           </Files>
         </Group>
