@@ -15,4 +15,5 @@
 *.l2p
 *._2i
 ExtDll.iex
+*.dbgconf
 
