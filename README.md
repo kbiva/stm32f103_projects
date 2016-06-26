@@ -16,6 +16,7 @@ About development board HY-STM32: http://wp.me/p31f2I-1F
 * <b>Nokia_E63</b> - Nokia E63 LCD demo.
 * <b>Nokia_N70</b> - Nokia N70 LCD demo.
 * <b>Roadstar_CD-354MP</b> - Roadstar CD-354MP/FM face plate demo.
+* <b>SD_Info</b> - Information about SD card.
 * <b>Samsung_E700</b> - Samsung E700 LCD demo.
 * <b>Samsung_GT-E1050</b> - Samsung GT-E1050 LCD demo.
 * <b>Scott_MCX80</b> - Scott MCX80 face plate demo.
