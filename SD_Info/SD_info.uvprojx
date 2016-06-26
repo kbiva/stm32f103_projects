@@ -375,9 +375,6 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>inc</GroupName>
-        </Group>
-        <Group>
           <GroupName>src</GroupName>
           <Files>
             <File>
