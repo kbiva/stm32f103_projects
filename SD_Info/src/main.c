@@ -70,12 +70,26 @@ int main (void) {
     LGDP4532_PutStr(buf,0,69);
     // This is unofficial list
     switch(SDCardInfo.SD_cid.ManufacturerID){
-      case 1:sprintf(buf,"(Panasonic)");break;
-      case 2:sprintf(buf,"(Toshiba)");break;
-      case 3:sprintf(buf,"(SanDisk)");break;
-      case 24:sprintf(buf,"(Lexar)");break;
-      case 27:sprintf(buf,"(Samsung)");break;
-      case 57:sprintf(buf,"(Patriot)");break;
+      case 1:sprintf(buf,"(Panasonic)");break;//PA
+      case 2:sprintf(buf,"(Toshiba)");break;//TM
+      case 3:sprintf(buf,"(SanDisk)");break;//SD
+      case 6:sprintf(buf,"(Ritek)");break;//RK
+      case 9:sprintf(buf,"(ATP)");break;//AT
+      case 19:sprintf(buf,"(Kingmax)");break;//KG
+      case 25:sprintf(buf,"(Dynacard)");break;//DY
+      case 26:sprintf(buf,"(PQI)");break;//PQ
+      case 27:sprintf(buf,"(Samsung)");break;//SM
+      case 29:sprintf(buf,"(ADATA)");break;//AD
+      case 39:sprintf(buf,"(Phison)");break;//PH
+      case 40:sprintf(buf,"(Barun)");break;//BE
+      case 81:sprintf(buf,"(STEC)");break;//S`
+      case 93:sprintf(buf,"(SwissBit)");break;//SB
+      case 97:sprintf(buf,"(Netlist)");break;//NL
+      case 99:sprintf(buf,"(Cactus)");break;//CZ
+      case 116:sprintf(buf,"(Jiaelec)");break;//JE
+      case 130:sprintf(buf,"(JangTay)");break;//JT
+      case 131:sprintf(buf,"(Netcom)");break;//NC
+      case 132:sprintf(buf,"(Strontium)");break;//TF
       default:sprintf(buf,"(unknown)");break;
     }
     LGDP4532_PutStr(buf,108,69);
