@@ -9,7 +9,7 @@ Hardware
 * HY-STM32 development board with onboard microSD card slot.
 * LCD module (LGDP4532 controller).
 
-Uses external libraries
+Used external libraries
 =
 * lib_STM32F10x_StdPeriph
 * lib_LGDP4532
