@@ -22,6 +22,7 @@ to the LCD. Each time exact the same 200 frames are calculated and displayed
 using 6 diffent methods to access LCD:
 
 1. Pixel,Bit Banging
+
   Calculated frame is drawn to LCD, pixel after pixel.
   Draw a checkerboard, and on top draw 3D cube, then repeat the process.
   This method is the slowest and 3D cube flickers a lot.
@@ -29,10 +30,12 @@ using 6 diffent methods to access LCD:
   This means 72 bits are clocked to the LCD for every pixel.
 
 2. Pixel,SPI
+
   This is the same as the first method, but uses hardware SPI. It is a bit faster,
   but flickering is still visible. 
 
 3. Framebuffer,Bit Banging
+
   Draw a checkerboard in the memory buffer, and on top draw 3D cube in the same memory buffer
   then output that buffer to the LCD using bit banging.
   The bounds are set at the begining, and then only color information is written to the LCD.
@@ -41,13 +44,16 @@ using 6 diffent methods to access LCD:
   9 bits are clocked to the LCD for every pixel.
 
 4. Framebuffer,SPI
+
    This method is simmilar to the third method, but uses hardware SPI. It is a bit faster though.
  
 5. Framebuffer,SPI,DMA
+
    This method is simmilar to the fourth method, but uses DMA controller to do hardware SPI.
    DMA is also used to clear memory buffer.
    
 6. Double framebuffer,SPI,DMA
+
    This method is simmilar to the fifth method, but two buffers. When one buffer is sent to the LCD,
    calculation is started immediately in the second buffer, and then buffers are switched.
    This is the fastest method.
