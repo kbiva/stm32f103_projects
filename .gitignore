@@ -16,4 +16,10 @@
 *._2i
 ExtDll.iex
 *.dbgconf
+*.map
+*.axf
+*.lnp
+*.sct
+*.htm
+*.uvgui.*
 
