@@ -10,6 +10,7 @@ About development board HY-STM32: http://wp.me/p31f2I-1F
 * <b>HP_5N</b> - HP LaserJet 5N front panel demo.
 * <b>Kenwood_KDC-5060R</b> - Kenwood KDC-5060R face plate demo.
 * <b>Kenwood_KDC-MP6090R</b> - Kenwood KDC-MP6090R face plate demo.
+* <b>Nokia_6020_framebuffer</b> - Nokia 6020 LCD - using framebuffer.
 * <b>Nokia_6100_stars</b> - Moving stars demo on Nokia 6100/6020 LCD.
 * <b>Nokia_6151</b> - Nokia 6151 LCD demo.
 * <b>Nokia_E61</b> - Nokia E61 LCD demo.
